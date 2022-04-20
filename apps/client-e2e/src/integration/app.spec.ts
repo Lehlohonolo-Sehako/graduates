@@ -174,14 +174,14 @@ describe('client notifications testing', () => {
 describe('Company Representative Feature', () => {
 
   beforeEach(() => {
-      cy.visit('http://localhost:4200/CompanyRepresentativeLogin');
+      cy.visit('/CompanyRepresentativeLogin');
   })
-
+ 
   it('should allow representative to login', () => {
 
       cy.get('.email').type('ishe.dzingirai@gmail.com');
       cy.get('.password').type('${IamACSStudent@1}{enter}');
-      cy.get('.btn btn-primary').click().visit('http://localhost:4200/CompanyRepresentativeHome');
+      cy.get('.btn btn-primary').click().visit('/CompanyRepresentativeHome');
   
   });
 
@@ -190,7 +190,7 @@ describe('Company Representative Feature', () => {
 describe('Company Representative Update Details', () => {
 
   beforeEach(() => {
-      cy.visit('http://localhost:4200/CompanyRepresentativeEdit');
+      cy.visit('/CompanyRepresentativeEdit');
   })
 
       it('should allow representative to update details', () => {
